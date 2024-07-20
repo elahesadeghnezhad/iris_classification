@@ -25,6 +25,6 @@ Make predictions for new samples.
 The trained model achieves an accuracy of approximately 97% on the test data.
 
 Author
-elahe sadeghnezhadian
-Contact:elasdn273@gmail.com
+elahe sadeghnezhadian.
+Contact:elasdn273@gmail.com.
 Feel free to contribute or use this code for your own projects!🌼
