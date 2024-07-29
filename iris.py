@@ -10,11 +10,11 @@ from sklearn.metrics import accuracy_score, classification_report
 # Load the Iris dataset
 iris = load_iris()
 X, y = iris.data, iris.target
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-# Define the model
+# building the model
 model = Sequential([
-    Dense(32, activation='relu', input_shape=(4,)),
+    Dense(16, activation='relu', input_shape=(4,)),
     Dense(3, activation='softmax')  #! 3 output classes
 ])
 
@@ -24,7 +24,7 @@ model.compile(
     metrics=['accuracy']
 )
 
-model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, epochs=100, validation_data=(X_test, y_test))
 
 # Evaluate the model
 y_pred = model.predict(X_test)
